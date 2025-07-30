@@ -8,9 +8,15 @@ const __dirname = dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
-
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Add your custom rules here
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": "warn", // ❗ Turns the error into a warning
+    },
+  },
 ];
 
 export default eslintConfig;

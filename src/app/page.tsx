@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
 import Lenis from 'lenis';
@@ -104,10 +104,10 @@ export default function ByfaHomePage() {
 
         <div className="py-8 border-y border-neutral-800 overflow-hidden whitespace-nowrap">
           <div className="animate-marquee flex gap-12 text-2xl uppercase tracking-wider font-semibold">
-            <span>Trendiest Store in Town</span><span className='text-neutral-600'>//</span>
-            <span>Limited Drops</span><span className='text-neutral-600'>//</span>
-            <span>Unisex Apparel</span><span className='text-neutral-600'>//</span>
-            <span>Premium Streetwear</span><span className='text-neutral-600'>//</span>
+            <span>Trendiest Store in Town</span><span className='text-neutral-600'>{"//"}</span>
+            <span>Limited Drops</span><span className='text-neutral-600'>{"//"}</span>
+            <span>Unisex Apparel</span><span className='text-neutral-600'>{"//"}</span>
+            <span>Premium Streetwear</span><span className='text-neutral-600'>{"//"}</span>
           </div>
         </div>
 
