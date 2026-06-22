@@ -47,7 +47,7 @@ name: "CONVERSE CHUK 70 2004",
   {
     id: 6,
     name: "PUMA SUEDE CLASSIC",
-    image: "catalog_006.jpg.avif",
+    image: "catalog_006.jpg",
   },
 ];
 
@@ -139,7 +139,7 @@ export default function ByfaHomePage() {
             <motion.h1
               {...fadeIn().initial}
               animate="animate"
-              className="text-6xl md:text-9xl font-extrabold uppercase tracking-tighter text-shadow-md"
+              className="text-4xl sm:text-7xl md:text-9xl font-extrabold uppercase tracking-tighter text-shadow-md"
             >
               xerodefaults
             </motion.h1>
@@ -154,7 +154,12 @@ export default function ByfaHomePage() {
         </section>
 
         <div className="py-8 border-y border-neutral-800 overflow-hidden whitespace-nowrap">
-          <div className="animate-marquee flex gap-12 text-2xl uppercase tracking-wider font-semibold">
+          <div className="animate-marquee flex gap-12 text-2xl uppercase tracking-wider font-semibold w-max">
+            <span>Trendiest Store in Town</span><span className='text-neutral-600'>{"//"}</span>
+            <span>Limited Drops</span><span className='text-neutral-600'>{"//"}</span>
+            <span>Unisex Apparel</span><span className='text-neutral-600'>{"//"}</span>
+            <span>Premium Streetwear</span><span className='text-neutral-600'>{"//"}</span>
+            {/* Duplicate for seamless infinite loop */}
             <span>Trendiest Store in Town</span><span className='text-neutral-600'>{"//"}</span>
             <span>Limited Drops</span><span className='text-neutral-600'>{"//"}</span>
             <span>Unisex Apparel</span><span className='text-neutral-600'>{"//"}</span>
@@ -246,11 +251,11 @@ export default function ByfaHomePage() {
           <motion.h3 {...fadeIn().initial} whileInView="animate" viewport={{ once: true }} className="text-center text-4xl font-bold uppercase tracking-wider mb-12">
             The Vibe
           </motion.h3>
-          <div className="flex gap-4 overflow-x-auto p-6 hide-scrollbar">
+          <div className="flex gap-4 overflow-x-auto p-6 scrollbar-hide">
           {lookbookImages.map((item, i) => (
   <motion.div
     key={item.id}
-    className="flex-shrink-0 w-[60vw] md:w-[30vw] h-[70vh] relative overflow-hidden rounded-md bg-neutral-800"
+    className="flex-shrink-0 w-[70vw] md:w-[30vw] h-[50vh] md:h-[70vh] relative overflow-hidden rounded-md bg-neutral-800"
     initial={{ opacity: 0, x: 50 }}
     whileInView={{
       opacity: 1,
