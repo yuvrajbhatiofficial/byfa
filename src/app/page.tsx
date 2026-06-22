@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, Suspense } from 'react';
-// import Image from 'next/image';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, OrbitControls, Center, Html } from '@react-three/drei';
@@ -189,10 +189,12 @@ export default function ByfaHomePage() {
                 viewport={{ once: true }}
               >
                 <div className="overflow-hidden bg-neutral-900 aspect-[3/4] relative group">
-  <img
+  <Image
     src={`/images/${product.image}`}
     alt={product.name}
-    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+    fill
+    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    className="object-cover transition-transform duration-500 group-hover:scale-105"
   />
 
   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
@@ -261,10 +263,12 @@ export default function ByfaHomePage() {
     }}
     viewport={{ amount: 0.3, once: true }}
   >
-    <img
+    <Image
       src={`/images/${item.image}`}
       alt={`Lookbook ${item.id}`}
-      className="w-full h-full object-cover"
+      fill
+      sizes="(max-width: 768px) 60vw, 30vw"
+      className="object-cover"
     />
   </motion.div>
 ))}
